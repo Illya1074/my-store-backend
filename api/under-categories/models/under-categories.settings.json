@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "under_categories",
   "info": {
-    "name": "Category",
+    "name": "UnderCategories",
     "description": ""
   },
   "options": {
@@ -15,9 +15,13 @@
     "Name": {
       "type": "string"
     },
-    "under_categories": {
-      "via": "category",
-      "collection": "under-categories"
+    "category": {
+      "via": "under_categories",
+      "model": "category"
+    },
+    "products": {
+      "via": "under_categories",
+      "collection": "product"
     }
   }
 }

@@ -12,18 +12,31 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "Name": {
       "type": "string"
     },
-    "desc": {
+    "Descriptions": {
       "type": "text"
     },
-    "price": {
+    "Price": {
       "type": "decimal"
     },
-    "category": {
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "under_categories": {
+      "collection": "under-categories",
       "via": "products",
-      "model": "category"
+      "dominant": true
     }
   }
 }
